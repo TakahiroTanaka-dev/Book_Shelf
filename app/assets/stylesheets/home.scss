@@ -1,0 +1,43 @@
+.Contents{
+  height: calc(100vh - 62px);
+  display: flex;
+  align-items: center;
+  background-image: url("bookshelf.jpg");
+  background-size: cover;
+  &__items{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  margin: 0 auto;
+  }
+}
+
+.Catch{
+  font-size: 80px;
+  color: brown;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px silver;
+  font-weight: bold;
+}
+
+.English{
+  font-size: 50px;
+  
+  color: brown;
+  text-shadow: 1px 1px 2px silver;
+  letter-spacing: 0.3px;
+  font-weight: bold;
+  margin-bottom:50px;
+}
+
+.Signup{
+  font-size: 25px;
+  font-weight: bold;
+  background:green;
+  border: solid 1px white;
+  margin: 0px 200px;
+  &__btn{
+    text-decoration: none;
+    color: white;
+  }
+}

@@ -9,11 +9,13 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     .Header
+      .Header__logo
+        =link_to books_path, class: "Btn" do
+          BookShelf
       .Header__bar
-    = yield
+        =link_to "#", class: "Btn" do
+          %i.fa.fa-bars
 
-    .Footer
-      %p.Footer__content
-        FIND YOUR BOOKS
+    = yield
       
 
