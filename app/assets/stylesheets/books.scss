@@ -1,3 +1,92 @@
+// index部分のscss
 * {
   box-sizing: border-box;
 }
+
+.Wrapper{
+  height: calc(100vh - 107px);
+  width: 100vw;
+}
+
+.Search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  background-image: url("library.webp");
+  background-size: auto;
+  &__form{
+    &__input{
+      width: 400px;
+      height: 50px;
+      border-radius: 20px;
+    }
+  }
+}
+
+.btn-info{
+  background-color: lightseagreen;
+  color: white;
+  border: 1px solid lightslategray;
+  width: 60px;
+  height: 40px;
+  margin-left: 20px;
+  box-shadow: 0 3px 0 rgb(122, 124, 136);
+}
+
+.btn-info:hover{
+  box-shadow: none;
+  transform: translate3d(0, 3px, 0);
+}
+
+.Book-list{
+  height: calc(100vh - 227px);
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  background-color: rgb(153, 160, 167);
+  display: flex;
+  align-items: center;
+  overflow-x:scroll;
+  text-align: center;
+  &__items{
+    height: 300px;
+    width: 400px;
+    background-color: #E6E6E6;
+    margin-left: 15px;
+    &__content{
+      font-weight: bold;
+    }
+  }
+}
+
+.Images{
+  height: 220px;
+  width: 270px;
+  margin-top: 35px;
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.Footer{
+  height: 45px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo{
+    color: lightslategrey;
+    font-size: 15px;
+    margin-left: 20px;
+  }
+  &__link{
+    margin-right: 20px;
+  }
+}
+
+.fab{
+  font-size: 20px;
+  margin-right: 10px;
+  color: black;
+}
+
+// こっからshowの部分

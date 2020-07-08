@@ -36,8 +36,16 @@
   background:green;
   border: solid 1px white;
   margin: 0px 200px;
+  box-shadow: 0 3px 0 rgba(136,136,136,1);
   &__btn{
     text-decoration: none;
     color: white;
+    
   }
+}
+
+.Signup:hover{
+  transform: translate3d(0, 5px, 0);
+  box-shadow: none;
+  background-color: lightseagreen;
 }

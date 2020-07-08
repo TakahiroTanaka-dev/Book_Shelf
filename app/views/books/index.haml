@@ -1,1 +1,39 @@
-<仮置き>
+.Wrapper
+  .Search
+    %form.Search__form{action: "search", method: "get", role: "search"}
+      %input.Search__form__input{name: "q", placeholder: "検索", type: "text", value: params[:q]}
+      %input.btn-info{alt: "検索", value: "検索", type: "submit"}
+
+
+  .Book-list
+    .Book-list__items
+      =image_tag("sample.jpg", alt:"", class: "Images")
+      .Book-list__items__content
+        本
+    .Book-list__items
+      =image_tag("sample.jpg", alt:"", class: "Images")
+      .Book-list__items__content
+        本
+    .Book-list__items
+      =image_tag("sample.jpg", alt:"", class: "Images")
+      .Book-list__items__content
+        本
+    .Book-list__items
+      =image_tag("sample.jpg", alt:"", class: "Images")
+      .Book-list__items__content
+        本
+    .Book-list__items
+      =image_tag("sample.jpg", alt:"", class: "Images")
+      .Book-list__items__content
+        本
+    .Book-list__items
+      =image_tag("sample.jpg", alt:"", class: "Images")
+      .Book-list__items__content
+        本
+
+.Footer
+  .Footer__logo
+    Copyright BookShelf
+  .Footer__link
+    %i.fab.fa-twitter
+    %i.fab.fa-instagram
