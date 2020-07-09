@@ -67,26 +67,109 @@
   margin-left: 15px;
 }
 
-.Footer{
-  height: 45px;
-  background-color: lightgray;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  &__logo{
-    color: lightslategrey;
-    font-size: 15px;
-    margin-left: 20px;
-  }
-  &__link{
-    margin-right: 20px;
-  }
-}
-
-.fab{
-  font-size: 20px;
-  margin-right: 10px;
-  color: black;
-}
 
 // こっからshowの部分
+.View{
+  height: calc(100vh - 107px);
+  width: 100vw;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  overflow: scroll;
+  &__picture{
+    width: 50vw;
+    height: calc(100vh - 107px);
+    
+    &__covers{
+      display: flex;
+      justify-content: center;
+      margin-top: 70px;
+    }
+    &__under{
+      display: flex;
+      justify-content: center;
+      &__icon{
+
+      }
+      &__numbers{
+        font-size: 20px;
+        font-weight: bold;
+      }
+    }
+  }
+  &__descriptions{
+    width: 50vw;
+    height: calc(100vh - 107px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    &__titles{
+      font-size: 25px;
+      width: 500px;
+      margin-bottom: 30px;
+      position: relative;
+      margin: 2em 0;
+      padding: 0.5em 1em;
+      border: solid 3px #95ccff;
+      border-radius: 8px;
+    }
+    &__authors{
+      font-size: 25px;
+      margin-bottom: 30px;
+      width: 500px;
+      position: relative;
+      margin: 2em 0;
+      padding: 0.5em 1em;
+      border: solid 3px #95ccff;
+      border-radius: 8px;
+    }
+    &__details{
+      font-size: 15px;
+      margin-bottom: 30px;
+      width: 500px;
+      height: 300px;
+      word-wrap: break-word;
+      position: relative;
+      margin: 2em 0;
+      padding: 0.5em 1em;
+      border: solid 3px #95ccff;
+      border-radius: 8px;
+    }
+    &__links{
+      font-size: 20px;
+      width: 300px;
+      margin-bottom: 30px;
+      padding: 0.5em 1em;
+      margin: 2em 0;
+      color: #FFF;
+      background: lightsalmon;
+      border-bottom: solid 6px orangered;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+      border-radius: 9px;
+    }
+  }
+}
+// spanようのデザイン
+.title{
+  position: absolute;
+        display: inline-block;
+        top: -13px;
+        left: 10px;
+        padding: 0 9px;
+        line-height: 1;
+        font-size: 19px;
+        background: #FFF;
+        color: #95ccff;
+        font-weight: bold;
+}
+
+.Single-images{
+  height: 500px;
+  width: 400px;
+}
+
+.fa-heart{
+  color: red;
+}
