@@ -6,15 +6,15 @@
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application'
+  
   %body
     .Header
       .Header__logo
         =link_to books_path, class: "Btn" do
           BookShelf
-      .Header__bar
-        =link_to "#", class: "Btn" do
-          %i.fa.fa-bars
+      
+      =render partial: 'books/drawer'
 
     = yield
 
