@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_07_06_171405) do
     t.string "name", null: false
     t.string "author"
     t.string "text"
-    t.text "image"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

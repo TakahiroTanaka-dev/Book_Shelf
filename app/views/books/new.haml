@@ -4,6 +4,6 @@
       %h3 好きな本を投稿しよう！
       = form.text_field :name, placeholder: "作品名", class: "input"
       = form.text_field :author, placeholder: "著者", class: "input"
-      = form.text_field :image, placeholder: "画像", class: "input"
+      = form.file_field :image, placeholder: "画像", class: "input"
       = form.text_area :text, placeholder: "本文" , rows: "10", class: "textarea"
       = form.submit "SEND", class: "btn"

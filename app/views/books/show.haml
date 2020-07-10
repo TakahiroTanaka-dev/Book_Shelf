@@ -1,7 +1,7 @@
 .View
   .View__picture
     .View__picture__covers
-      =image_tag("sample.jpg", alt:"", class: "Single-images")
+      =link_to image_tag( "#{@book.image}", alt:"", class: "Single-images")
     .View__picture__under
       .View__picture__under__icon
         =link_to "#", class: "heart" do
@@ -11,13 +11,13 @@
   .View__descriptions
     .View__descriptions__titles
       %span.title Title
-      %p titles
-    .View__descriptions__authors
+      =@book.name
+    .View__descriptions__authors  
       %span.title Author
-      %p authors
+      =@book.author
     .View__descriptions__details
       %span.title Details
-      %p 東京ディズニーランド / 東京ディズニーシーご使用できないチケット等の取り扱いについて（2020年6月24日（水）11:00更新）
+      =@book.text
     .View__descriptions__links
       %p Amazonlinks
 
