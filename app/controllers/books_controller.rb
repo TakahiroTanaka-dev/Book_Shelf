@@ -18,6 +18,11 @@ class BooksController < ApplicationController
     @book=Book.find(params[:id])
   end
 
+  def search
+    @books=Book.search(params[:keyword])
+    render "index"
+  end
+
   private
 
   def book_params
