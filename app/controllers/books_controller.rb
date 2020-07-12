@@ -9,7 +9,6 @@ class BooksController < ApplicationController
   end
 
   def create
-    
     Book.create(book_params)
     redirect_to books_path
   end
@@ -20,7 +19,15 @@ class BooksController < ApplicationController
 
   def search
     @books=Book.search(params[:keyword])
-    render "index"
+    respond_to do |format|
+      format.html
+      format.json
+    end
+    
+  end
+
+  def edit
+    @book=Book.find(params[:id])
   end
 
   private
