@@ -1,0 +1,84 @@
+/* hamburger menu v0.1 */
+
+#drawer_wrapper nav {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background:#333;
+  font-size: 14px;
+  box-sizing: border-box;
+  z-index: 98;
+}
+#drawer_wrapper nav.menuitems ul li {
+  display:block;
+  padding: 8px 28px;
+  border-bottom: 1px dotted #555;
+  background-color: #444;
+  color: silver;
+}
+#drawer_wrapper nav.menuitems ul li a {
+  text-decoration: none;
+  color: #ddd;
+  width: 99%;
+  display:block;
+}
+#drawer_wrapper #hamburger_icon {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 24px;
+  z-index: 99;
+  box-sizing: border-box;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms
+}
+#drawer_wrapper #hamburger_icon span.yum {
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: #666;
+  border-radius: 10px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms
+}
+#drawer_wrapper #hamburger_icon span:nth-child(1) {
+  top: 0;
+}
+#drawer_wrapper #hamburger_icon span:nth-child(2) {
+  top: 10px;
+}
+#drawer_wrapper #hamburger_icon span:nth-child(3) {
+  top: 20px;
+}
+#drawer_wrapper #hamburger_icon.open span {
+  background: #fff;
+}
+#drawer_wrapper #hamburger_icon.open span {
+  width: 24px;;
+}
+#drawer_wrapper .contents section p {
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  line-height: 1.4;
+  font-size: 20px;
+  color: #fff;
+}
+#drawer_wrapper .contents section:nth-child(odd) p {
+  left: 10%
+}
+#drawer_wrapper .contents section:nth-child(even) p {
+  right: 10%
+}
+#drawer_background {
+  z-index: 97;
+  position: fixed;
+  background-color: rgba(0,0,0,0.5);
+  display: none;
+}

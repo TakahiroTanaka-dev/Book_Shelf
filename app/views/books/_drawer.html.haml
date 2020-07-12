@@ -1,0 +1,20 @@
+/ drawer.begin
+#drawer_wrapper
+  / ハンバーガーメニュー
+  #hamburger_icon
+    %span.yum
+    %span.yum
+    %span.yum
+    / 飛び出すメニュー(以下を書き換え)
+    %nav.menuitems
+      %ul
+        %li Login
+        %li Logout
+        %li
+          %a{ href: new_book_path}
+            New Post
+        %li My Page
+        %li Sign Up
+  / 透明な背景ウィンドウ(閉じる専用)
+  #drawer_background
+/ drawer.end

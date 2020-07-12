@@ -1,0 +1,25 @@
+.View
+  .View__picture
+    .View__picture__covers
+      =link_to image_tag( "#{@book.image}", alt:"", class: "Single-images")
+    .View__picture__under
+      .View__picture__under__icon
+        =link_to "#", class: "heart" do
+          %i.fa.fa-heart
+      .View__picture__under__numbers
+        60
+  .View__descriptions
+    .View__descriptions__titles
+      %span.title Title
+      =@book.name
+    .View__descriptions__authors  
+      %span.title Author
+      =@book.author
+    .View__descriptions__details
+      %span.title Details
+      =@book.text
+    .View__descriptions__links
+      %p Amazonlinks
+
+  .View__Comment
+    

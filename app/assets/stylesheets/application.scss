@@ -1,0 +1,59 @@
+@import "reset";
+@import "books";
+@import "home";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "drawer";
+
+
+*{
+  box-sizing: border-box;
+}
+
+.Header{
+  height: 62px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #D8D8D8;
+  background-color:lightgray;
+  
+  &__logo{
+    margin-left: 40px;
+    font-size: 20px;
+  }
+}
+
+.Btn{
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.fa{
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.Footer{
+  height: 45px;
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__logo{
+    color: lightslategrey;
+    font-size: 15px;
+    margin-left: 20px;
+  }
+  &__link{
+    margin-right: 20px;
+  }
+}
+
+.fab{
+  font-size: 20px;
+  margin-right: 10px;
+  color: black;
+}
