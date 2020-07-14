@@ -1,8 +1,6 @@
 class BooksController < ApplicationController
 
-  def top
-    
-  end
+  before_action :move_to_index, except:[:index, :show]
 
   def index
     @books=Book.all
@@ -51,7 +49,11 @@ class BooksController < ApplicationController
   private
 
   def book_params
-    params.require(:book).permit(:name, :author, :text, :image)
+    params.require(:book).permit(:name, :author, :text, :image).merge(user_id: current_user.id)
+  end
+
+  def move_to_index
+    redirect_to action: :index unless user_signed_in?
   end
   
 end
