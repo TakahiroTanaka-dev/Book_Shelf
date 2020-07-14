@@ -1,0 +1,20 @@
+=render partial: 'books/drawer'
+.Wrapper
+  .Search
+    =form_with(url: search_books_path, local: true, method: :get, class: "Search__form") do |f|
+      =f.text_field :keyword, placdeholder: "検索", class: "Search__form__input"
+      =f.submit "検索", class: "btn-info"
+    
+
+
+  .Book-list
+    - @books.each do |book|
+      .Book-list__items
+        =link_to image_tag("#{book.image}", alt:"", class: "Images"), book_path(book.id)
+        .Book-list__items__content
+          =book.name
+
+
+  -# %form.Search__form{url: search_books_path ,action: "search", method: "get", role: "search"}
+      -# %input.Search__form__input{name: "q", placeholder: "検索", type: "text", value: params[:q], class:"length"}
+      -# %input.btn-info{alt: "検索", value: "検索", type: "submit"}

@@ -12,7 +12,7 @@ class BooksController < ApplicationController
 
   def create
     Book.create(book_params)
-    redirect_to books_path
+    redirect_to users_path
   end
 
   def show 
