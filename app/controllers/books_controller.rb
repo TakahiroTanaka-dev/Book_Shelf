@@ -22,7 +22,7 @@ class BooksController < ApplicationController
   end
 
   def search
-    @books=Book.search(params[:keyword])
+    @books=Book.search(params[:keyword]).order(created_at: :desc)
     respond_to do |format|
       format.html
       format.json
