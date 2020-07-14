@@ -52,18 +52,20 @@
   white-space: nowrap;
   text-align: center;
   &__items{
-    height: 300px;
+    height: 450px;
     width: 400px;
     background-color: #E6E6E6;
     margin-left: 15px;
     &__content{
       font-weight: bold;
+      font-size: 25px;
+      margin-top: 20px;
     }
   }
 }
 
 .Images{
-  height: 220px;
+  height: 300px;
   width: 270px;
   margin-top: 35px;
   margin-right: 15px;
