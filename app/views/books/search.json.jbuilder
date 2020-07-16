@@ -4,4 +4,5 @@ json.array! @books do |book|
   json.author book.author
   json.text book.text
   json.image book.image.url
+  json.user_id book.user_id
 end

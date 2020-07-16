@@ -41,7 +41,8 @@ $(function(){
     })
 
     .fail(function(){
-      alert('Error');
+      debugger;
+      alert('ログインしてください');
     })
     
   });
