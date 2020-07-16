@@ -31,8 +31,13 @@
       =link_to image_tag( "#{@book.image}", alt:"", class: "Single-images")
     .View__picture__under
       .View__picture__under__icon
-        =link_to "#", class: "heart" do
-          %i.fa.fa-heart
+        -if current_user.already_liked?(@book)
+          =link_to book_like_path(@book), method: :delete do
+            %i.fa.fa-heart
+        -else
+          =link_to book_likes_path(@book), method: :post do
+            %i.fa.fa-heart
+          
       .View__picture__under__numbers
         =@book.likes.count
   .View__descriptions

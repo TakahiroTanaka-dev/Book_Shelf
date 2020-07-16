@@ -9,15 +9,14 @@ Rails.application.routes.draw do
   root "home#top"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-  resources :books do
 
+  resources :users, only: [:index]
+  resources :books do
+    resources :likes, only: [:create, :destroy]
     collection do
       get 'search'
     end
-    resources :likes, only:[:create, :destroy]
   end
-  
-  resources :users, only: [:index]
 
 
 # 場所が微妙だけどdeviseのスコープ範囲指定
