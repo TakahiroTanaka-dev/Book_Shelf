@@ -11,14 +11,16 @@
         %li
           %a{ href: bookshelf_path}
             Top
-        %li
-          %a{ href: new_book_path}
-            New Post
-        %li
-          %a{ href: edit_book_path}
-            Edit
-        %li
-          =link_to 'Destroy', book_path, method: :delete
+      -if user_signed_in? && current_user.id == @book.user_id
+        %ul
+          %li
+            %a{ href: new_book_path}
+              New Post
+          %li
+            %a{ href: edit_book_path}
+              Edit
+          %li
+            =link_to 'Destroy', book_path, method: :delete
   / 透明な背景ウィンドウ(閉じる専用)
   #drawer_background
 / drawer.end

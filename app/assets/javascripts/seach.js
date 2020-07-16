@@ -28,7 +28,6 @@ $(function(){
       dataType: 'json'
     })
     .done(function(books){
-      console.log(books);
       $(".Book-list").empty();
       if (books.length !== 0){
         books.forEach(function(book){
@@ -41,7 +40,6 @@ $(function(){
     })
 
     .fail(function(){
-      debugger;
       alert('ログインしてください');
     })
     

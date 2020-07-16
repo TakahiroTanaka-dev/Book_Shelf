@@ -1,9 +1,7 @@
 =render partial: 'books/drawer'
 .Wrapper
   .Search
-    =form_with(url: search_books_path, local: true, method: :get, class: "Search__form") do |f|
-      =f.text_field :keyword, placdeholder: "検索", class: "Search__form__input"
-      =f.submit "検索", class: "btn-info"
+    
     
 
 
@@ -13,6 +11,7 @@
         =link_to image_tag("#{book.image}", alt:"", class: "Images"), book_path(book.id)
         .Book-list__items__content
           =book.name
+  =paginate @books
 
 
   -# %form.Search__form{url: search_books_path ,action: "search", method: "get", role: "search"}
