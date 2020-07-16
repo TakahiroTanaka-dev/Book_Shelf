@@ -1,0 +1,32 @@
+
+.Wrapper
+  .box
+    .box-inner
+      = form_with model: @user, url: user_session_path, local: true do |f|
+        %h1 ログイン
+        .box-email
+          = f.label :email, "Eメール"
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+          
+        .box-password
+          .a-row
+            .column-left
+              = f.label :password, "パスワード"
+            .column-right
+              = link_to "パスワードを忘れた場合", new_user_password_path
+              
+          = f.password_field :password, autocomplete: "current-password"
+        .box-login
+          = f.submit "ログイン"
+          
+          - if devise_mapping.rememberable?
+            .remember
+              = f.check_box :remember_me
+              = f.label :remember, "ログインしたままにする"
+      .box-newusr
+        %p
+          %span ------------
+          BookShelfを始めてみませんか？
+          %span ------------
+        = link_to "BookShelfアカウントを作成", new_user_registration_path

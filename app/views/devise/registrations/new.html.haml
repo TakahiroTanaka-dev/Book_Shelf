@@ -1,0 +1,23 @@
+.Wrapper
+  .box
+    .box-inner
+      = form_with model: @user, url: user_registration_path, local: true do |f|
+        = render "devise/shared/error_messages"
+        %h1 新規登録
+        .box-email
+          = f.label :email, "Eメール"
+          %br/
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+          
+        .box-password
+          .a-row
+            .column-left
+              = f.label :password, "パスワード"
+          
+          - if @minimum_password_length
+            %em
+              (#{@minimum_password_length}文字以上必要です)
+          %br/    
+          = f.password_field :password, autocomplete: "current-password"
+        .box-login
+          = f.submit "新規登録"

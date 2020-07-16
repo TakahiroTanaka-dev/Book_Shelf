@@ -6,14 +6,40 @@
     %span.yum
     %span.yum
     / 飛び出すメニュー(以下を書き換え)
-    %nav.menuitems
-      %ul
-        %li
-          %a{ href: bookshelf_path}
-            Top
-        %li
-          %a{ href: new_book_path}
-            New Post
+    -if user_signed_in?
+      %nav.menuitems
+        %ul
+          %li
+            %a{ href: bookshelf_path}
+              Top
+          %li
+            %a{ href: books_path}
+              BookShelf
+          %li
+            %a{ href: users_path}
+              Mypage
+          %li
+            %a{ href: destroy_user_session_path, method: :delete}
+              Logout
+          %li
+            %a{ href: new_book_path}
+              New Post
+    -else
+      %nav.menuitems
+        %ul
+          %li
+            %a{ href: bookshelf_path}
+              Top
+          %li
+            %a{ href: books_path}
+              BookShelf
+
+          %li
+            %a{ href: new_user_session_path}
+              Login
+          %li
+            %a{ href: new_user_registration_path}
+              Signup
   / 透明な背景ウィンドウ(閉じる専用)
   #drawer_background
 / drawer.end
