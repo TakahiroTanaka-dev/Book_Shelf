@@ -1,0 +1,8 @@
+-if current_user.already_liked?(@book)
+  =link_to book_like_path(@book), method: :delete, class: "Toggle" do
+    .Heart
+      %i.heart
+-else
+  =link_to book_likes_path(@book), method: :post, class: "Toggle" do
+    .Heart
+      %i.heart
