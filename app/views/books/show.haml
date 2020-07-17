@@ -41,15 +41,16 @@
       =link_to image_tag( "#{@book.image}", alt:"", class: "Single-images")
     .View__picture__under
       .View__picture__under__icon
-        -if current_user.present?
-          -if current_user.already_liked?(@book)
-            =link_to book_like_path(@book), method: :delete, class: "Toggle" do
-              .Heart
-                %i.heart
-          -else
-            =link_to book_likes_path(@book), method: :post, class: "Toggle" do
-              .Heart
-                %i.heart
+        .Heart
+          -if current_user.present?
+            -if current_user.already_liked?(@book)
+              =link_to book_like_path(@book), method: :delete, class: "Toggle" do
+                .Heart
+                  %i.heart
+            -else
+              =link_to book_likes_path(@book), method: :post, class: "Toggle" do
+                .Heart
+                  %i.heart
       .View__picture__under__numbers
         =@book.likes.count
 

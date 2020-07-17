@@ -9,12 +9,11 @@
     = javascript_include_tag 'application'
   
   %body
+    =render 'layouts/notifications'
     .Header
       .Header__logo
         =link_to books_path, class: "Btn" do
           BookShelf
-
-      
 
     = yield
 
