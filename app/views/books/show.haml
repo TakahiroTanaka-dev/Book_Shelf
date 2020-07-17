@@ -33,10 +33,12 @@
       .View__picture__under__icon
         -if current_user.already_liked?(@book)
           =link_to book_like_path(@book), method: :delete do
-            %i.fa.fa-heart
+            .Heart
+              %i.heart
         -else
           =link_to book_likes_path(@book), method: :post do
-            %i.fa.fa-heart
+            .Heart
+              %i.heart
           
       .View__picture__under__numbers
         =@book.likes.count
