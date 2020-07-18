@@ -63,7 +63,7 @@
       =@book.author
     .View__descriptions__details
       %span.title Details
-      =@book.text
+      = simple_format(@book.text)
     .View__descriptions__links
       %p Amazonlinks
 
