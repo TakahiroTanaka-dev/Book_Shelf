@@ -12,7 +12,7 @@
   justify-content: center;
   align-items: center;
   height: 120px;
-  background-image: url("library.webp");
+  background-image: image-url("library.webp");
   background-size: auto;
   &__form{
     &__input{
@@ -209,7 +209,7 @@
   height: calc(100vh - 107px);
   display: flex;
   justify-content: center;
-  background-image: url("beautifulbook.jpg");
+  background-image: image-url("beautifulbook.jpg");
   background-size: cover;
 }
 
