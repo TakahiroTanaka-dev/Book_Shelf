@@ -39,3 +39,11 @@ $(function(){
 
 });
 
+// 本の1つ1つにマウスを乗せたらCSSを変更する
+$(function(){
+  $(".Book-list__items").hover(function(){
+    $(this).animate({opacity: 0.6}, {duration: 100, easing: 'swing'})
+  }, function(){
+    $(this).animate({opacity: 1})
+  })
+});
