@@ -13,6 +13,9 @@
         =link_to image_tag("#{book.image}", alt:"", class: "Images"), book_path(book.id)
         .Book-list__items__content
           =book.name
+        .Book-list__items_content
+          %i.fa.fa-heart
+            =book.likes.count
 
 
   -# %form.Search__form{url: search_books_path ,action: "search", method: "get", role: "search"}

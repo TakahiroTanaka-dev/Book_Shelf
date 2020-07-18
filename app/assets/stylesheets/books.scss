@@ -94,8 +94,10 @@
     &__under{
       display: flex;
       justify-content: center;
+      align-items: center;
       &__icon{
-
+        display: flex;
+        justify-content: center;
       }
       &__numbers{
         font-size: 20px;
@@ -175,8 +177,24 @@
   width: 400px;
 }
 
+.Heart{
+  width: 100px;
+  height: 100px;
+  background: url(http://nelog.jp/wp-content/uploads/2016/03/heart_animation.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+
 .fa-heart{
+  margin-top: 10px;
   color: red;
+  
+}
+
+.Heart:hover{
+  background-position: -2800px 0;
+  -webkit-transition: background 1s steps(28);
+  transition: background 1s steps(28);
 }
 
 

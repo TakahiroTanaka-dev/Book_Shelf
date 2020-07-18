@@ -11,6 +11,16 @@
         %li
           %a{ href: bookshelf_path}
             Top
+        %li
+          %a{ href: books_path}
+            BookShelf
+
+          %li
+            %a{ href: new_user_session_path}
+              Login
+          %li
+            %a{ href: new_user_registration_path}
+              Signup
       -if user_signed_in? && current_user.id == @book.user_id
         %ul
           %li
@@ -31,10 +41,19 @@
       =link_to image_tag( "#{@book.image}", alt:"", class: "Single-images")
     .View__picture__under
       .View__picture__under__icon
-        =link_to "#", class: "heart" do
-          %i.fa.fa-heart
+        .Heart
+          -if current_user.present?
+            -if current_user.already_liked?(@book)
+              =link_to book_like_path(@book), method: :delete, class: "Toggle" do
+                .Heart
+                  %i.heart
+            -else
+              =link_to book_likes_path(@book), method: :post, class: "Toggle" do
+                .Heart
+                  %i.heart
       .View__picture__under__numbers
-        60
+        =@book.likes.count
+
   .View__descriptions
     .View__descriptions__titles
       %span.title Title

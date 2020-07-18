@@ -12,11 +12,13 @@ class BooksController < ApplicationController
 
   def create
     Book.create(book_params)
+    flash[:notice]="新しい本を追加しました"
     redirect_to users_path
   end
 
   def show 
     @book=Book.find(params[:id])
+    @like=Like.new
   end
 
   def search
@@ -35,12 +37,14 @@ class BooksController < ApplicationController
   def update
     book=Book.find(params[:id])
     book.update(book_params)
+    flash[:notice]="本の内容を編集しました"
     redirect_to book_path(book.id)
   end
 
   def destroy
     book=Book.find(params[:id])
     book.destroy
+    flash[:alert]="本を削除しました"
     redirect_to books_path
   end
 
