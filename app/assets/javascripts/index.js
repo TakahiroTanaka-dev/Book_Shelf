@@ -1,3 +1,4 @@
+// ハンバーガーメニューのやつ
 $(function(){
 
   const btn = $('#hamburger_icon');
@@ -37,3 +38,4 @@ $(function(){
   win.on("click", closeMenu);
 
 });
+
