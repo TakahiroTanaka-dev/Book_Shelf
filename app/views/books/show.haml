@@ -14,13 +14,7 @@
         %li
           %a{ href: books_path}
             BookShelf
-      -unless user_signed_in?
-        %li
-          %a{ href: new_user_session_path}
-            Login
-        %li
-          %a{ href: new_user_registration_path}
-            Signup
+      
       -if user_signed_in? && current_user.id == @book.user_id
         %ul
           %li
