@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
 
   resources :users, only: [:index]
+  resources :categories, except: [:new, :show]
   resources :books do
     resources :likes, only: [:create, :destroy]
     collection do
