@@ -1,3 +1,4 @@
 class Category < ApplicationRecord
-  belongs_to :book
+  has_many :books
+  has_ancestry
 end
