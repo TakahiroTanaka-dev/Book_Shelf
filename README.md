@@ -3,7 +3,7 @@
  
 # DEMO
  
-![bookshelfdemo](https://user-images.githubusercontent.com/66983614/90341219-b2285700-e038-11ea-8020-746297c6da14.gif)
+![bookshelf](https://user-images.githubusercontent.com/66983614/90341587-c1f56a80-e03b-11ea-88ab-492a582343e0.gif)
  
  
  
