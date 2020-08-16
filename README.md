@@ -1,24 +1,24 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Name
+## Book Shekf
+このアプリは自分専用の本棚を作成し、内容を忘れないために要点を整理するアプリです。 
+ 
+# DEMO
+ 
+![bookshelfdemo](https://user-images.githubusercontent.com/66983614/90341219-b2285700-e038-11ea-8020-746297c6da14.gif)
+ 
+ 
+ 
+# Usage
+ 
+```bash
+git clone https://github.com/TakahiroTanaka-dev/Book_Shelf.git
+```
+# Author
+ 
+* 田中貴大
+* テックキャンプ 79期卒業
+* takahiro.forwork1130@gmail.com
+* Twitter: https://twitter.com/engineer_tanaka
+ 
+# License
+[MIT license](https://en.wikipedia.org/wiki/MIT_License).
