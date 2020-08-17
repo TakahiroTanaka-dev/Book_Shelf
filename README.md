@@ -35,7 +35,7 @@ git clone https://github.com/TakahiroTanaka-dev/Book_Shelf.git
 [MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 # DB設計
-# users テーブル
+## users テーブル
 |Column|Type|Options|
 |------|----|-------|
 |email|string|null :false, unique: true|
