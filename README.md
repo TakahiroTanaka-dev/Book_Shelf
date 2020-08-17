@@ -1,7 +1,7 @@
 # Book Shelf
 このアプリは自分専用の本棚を作成し、内容を忘れないために要点を整理するアプリです。
 
-URL: [http://52.199.133.126/]
+URL: http://52.199.133.126/<br>
 開発環境：Ruby / Ruby on Rails / JavaScript/ JQuery / AWS / haml / scss
 
 # DEMO
