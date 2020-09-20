@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
 
-# 場所が微妙だけどdeviseのスコープ範囲指定
+  # 場所が微妙だけどdeviseのスコープ範囲指定
   devise_scope :user do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
