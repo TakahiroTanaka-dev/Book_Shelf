@@ -38,7 +38,10 @@ class BooksController < ApplicationController
     book=Book.find(params[:id])
     book.update(book_params)
     flash[:notice]="本の内容を編集しました"
-    redirect_to book_path(book.id)
+    respond_to do |format|
+      format.html {redirect_to book_path(book.id)}
+      format.json
+    end
   end
 
   def destroy

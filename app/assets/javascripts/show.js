@@ -1,5 +1,5 @@
 $(function(){
-  $('.View__descriptions__edit').on('click', function(){
-    console.log("hello")
+  $(document).on('click','.View__descriptions__edit', function(){
+    
   })
 })
