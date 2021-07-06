@@ -21,9 +21,6 @@
             %a{ href: new_book_path}
               New Post
           %li
-            %a{ href: edit_book_path}
-              Edit
-          %li
             =link_to 'Destroy', book_path, method: :delete
   / 透明な背景ウィンドウ(閉じる専用)
   #drawer_background
@@ -58,6 +55,15 @@
     .View__descriptions__details
       %span.title Details
       = simple_format(@book.text)
+    .View__descriptions__edit
+    -# 下のやつが出てくるようにすればOK
+    = form_with(model: @book, local: true, class: "Area") do |form|
+      %h3 編集
+      = form.text_field :name, placeholder: "作品名", class: "input"
+      = form.text_field :author, placeholder: "著者", class: "input"
+      = form.file_field :image, placeholder: "画像", class: "carrierwave"
+      = form.text_area :text, placeholder: "本文" , rows: "10", class: "textarea"
+      = form.submit "EDIT", class: "btn"
 
   .View__Comment
     
